@@ -15,6 +15,9 @@ class CreateOpsiJawabansTable extends Migration
     {
         Schema::create('opsi__jawabans', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_question');
+            $table->string('isi_opsi');
+            $table->string('pilihan');
             $table->timestamps();
         });
     }

@@ -14,7 +14,8 @@ class CreateDivisisTable extends Migration
     public function up()
     {
         Schema::create('divisis', function (Blueprint $table) {
-            $table->increments('id');
+            $table->string('id_divisi');
+            $table->string('nama_divisi');
             $table->timestamps();
         });
     }

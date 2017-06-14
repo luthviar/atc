@@ -15,6 +15,15 @@ class CreatePersonnelsTable extends Migration
     {
         Schema::create('personnels', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_user');
+            $table->string('fname');
+            $table->string('lname');
+            $table->integer('jenis_kelamin');
+            $table->string('email');
+            $table->string('alamat');
+            $table->string('no_hp');
+            $table->string('photo');
+            $table->date('tanggal_lahir');
             $table->timestamps();
         });
     }

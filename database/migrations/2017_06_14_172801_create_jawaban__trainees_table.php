@@ -15,6 +15,9 @@ class CreateJawabanTraineesTable extends Migration
     {
         Schema::create('jawaban__trainees', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_question');
+            $table->string('isi_jawaban');
+            $table->integer('skor');
             $table->timestamps();
         });
     }

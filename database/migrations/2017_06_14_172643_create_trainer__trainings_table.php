@@ -15,6 +15,8 @@ class CreateTrainerTrainingsTable extends Migration
     {
         Schema::create('trainer__trainings', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_user');
+            $table->integer('id_training');
             $table->timestamps();
         });
     }

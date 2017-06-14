@@ -15,6 +15,9 @@ class CreateSectionTrainingsTable extends Migration
     {
         Schema::create('section__trainings', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_trainig');
+            $table->integer('id_type');
+            $table->integer('sequence');
             $table->timestamps();
         });
     }

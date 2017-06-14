@@ -15,6 +15,10 @@ class CreateStrukturOrganisasisTable extends Migration
     {
         Schema::create('struktur__organisasis', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('id_divisi');
+            $table->string('id_departmen');
+            $table->string('id_unit');
+            $table->string('id_section');
             $table->timestamps();
         });
     }

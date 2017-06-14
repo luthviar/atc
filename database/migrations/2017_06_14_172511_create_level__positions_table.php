@@ -15,6 +15,7 @@ class CreateLevelPositionsTable extends Migration
     {
         Schema::create('level__positions', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nama_level');
             $table->timestamps();
         });
     }
