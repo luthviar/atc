@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Training;
+use App\SectionTraining;
 use Illuminate\Http\Request;
 
 class TrainingController extends Controller
@@ -44,9 +45,14 @@ class TrainingController extends Controller
      * @param  \App\Training  $training
      * @return \Illuminate\Http\Response
      */
-    public function show(Training $training)
+    public function show($training)
     {
-        //
+        $training = Training::find($training);
+        $section = SectionTraining::where('id_training',$training->id)->get();
+        return view('test.training-show', [
+            'training' => $training,
+            'section' => $section
+            ]);
     }
 
     /**

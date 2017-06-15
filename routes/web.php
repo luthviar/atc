@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Route::resource('module', 'ModuleController');
+
+Route::resource('training', 'TrainingController');
+
+

@@ -44,9 +44,9 @@ class SectionTrainingController extends Controller
      * @param  \App\SectionTraining  $sectionTraining
      * @return \Illuminate\Http\Response
      */
-    public function show(SectionTraining $sectionTraining)
+    public function show($sectionTraining)
     {
-        //
+        
     }
 
     /**
