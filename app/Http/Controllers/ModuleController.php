@@ -14,7 +14,8 @@ class ModuleController extends Controller
      */
     public function index()
     {
-        //
+        $module = Module::orderBy('parent', 'ASC')->get();
+        return view('test.viewall')->with('module',$module);
     }
 
     /**
@@ -35,7 +36,7 @@ class ModuleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -44,9 +45,16 @@ class ModuleController extends Controller
      * @param  \App\Module  $module
      * @return \Illuminate\Http\Response
      */
-    public function show(Module $module)
+    public function show( $module)
     {
-        //
+        $modul = Module::find($module);
+        $training = Module::find($module)->training;
+        $array = [
+            "module" => $modul,
+            "training" => $training,
+        ];
+
+        return view('test.view')->with('modul',$array);
     }
 
     /**
