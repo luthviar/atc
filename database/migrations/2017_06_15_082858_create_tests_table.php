@@ -16,12 +16,12 @@ class CreateTestsTable extends Migration
         Schema::create('tests', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_section_training')->unsigned();
-            $table->time('time');
+            $table->time('time')->nullable();
             $table->integer('jumlah_soal');
-            $table->integer('attemp');
-            $table->integer('question_per_page');
+            $table->integer('attemp')->nullable();
+            $table->integer('question_per_page')->nullable();
             $table->date('publised');
-            $table->integer('min_score');
+            $table->integer('min_score')->nullable();
             $table->timestamps();
 
             $table->foreign('id_section_training')

@@ -16,9 +16,9 @@ class CreateTrainingsTable extends Migration
         Schema::create('trainings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->integer('id_module')->unsigned();
-            $table->string('enroll_key');
+            $table->string('enroll_key')->nullable();
             $table->timestamps();
 
             $table->foreign('id_module')

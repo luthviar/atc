@@ -20,7 +20,7 @@ class CreateQuestionsTable extends Migration
             $table->integer('no_soal');
             $table->string('pertanyaan');
             $table->string('true_answer');
-            $table->integer('skor_maks');
+            $table->integer('skor_maks')->nullable();
             $table->timestamps();
 
             $table->foreign('id_test')

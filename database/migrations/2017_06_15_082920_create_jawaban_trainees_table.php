@@ -17,7 +17,7 @@ class CreateJawabanTraineesTable extends Migration
             $table->increments('id');
             $table->integer('id_question')->unsigned();
             $table->string('isi_jawaban');
-            $table->integer('skor');
+            $table->integer('skor')->nullable();
             $table->timestamps();
 
             $table->foreign('id_question')

@@ -17,7 +17,7 @@ class CreateUserTestsTable extends Migration
             $table->increments('id');
             $table->integer('id_test')->unsigned();
             $table->integer('id_user');
-            $table->integer('skor');
+            $table->integer('skor')->nullable();
             $table->timestamps();
 
             $table->foreign('id_test')

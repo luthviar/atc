@@ -17,7 +17,7 @@ class CreatePersonnelsTable extends Migration
             $table->increments('id');
             $table->integer('id_user')->unsigned();
             $table->string('fname');
-            $table->string('lname');
+            $table->string('lname')->nullable();
             $table->integer('jenis_kelamin');
             $table->string('email');
             $table->string('alamat');
