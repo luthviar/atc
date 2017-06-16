@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\User_Test;
+use App\UserTest;
 use Illuminate\Http\Request;
 
 class UserTestController extends Controller
@@ -41,10 +41,10 @@ class UserTestController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\User_Test  $user_Test
+     * @param  \App\UserTest  $userTest
      * @return \Illuminate\Http\Response
      */
-    public function show(User_Test $user_Test)
+    public function show(UserTest $userTest)
     {
         //
     }
@@ -52,10 +52,10 @@ class UserTestController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\User_Test  $user_Test
+     * @param  \App\UserTest  $userTest
      * @return \Illuminate\Http\Response
      */
-    public function edit(User_Test $user_Test)
+    public function edit(UserTest $userTest)
     {
         //
     }
@@ -64,10 +64,10 @@ class UserTestController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User_Test  $user_Test
+     * @param  \App\UserTest  $userTest
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User_Test $user_Test)
+    public function update(Request $request, UserTest $userTest)
     {
         //
     }
@@ -75,10 +75,10 @@ class UserTestController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\User_Test  $user_Test
+     * @param  \App\UserTest  $userTest
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User_Test $user_Test)
+    public function destroy(UserTest $userTest)
     {
         //
     }

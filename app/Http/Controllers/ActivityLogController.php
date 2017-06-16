@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\TrainerTraining;
+use App\ActivityLog;
 use Illuminate\Http\Request;
 
-class TrainerTrainingController extends Controller
+class ActivityLogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class TrainerTrainingController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\TrainerTraining  $trainerTraining
+     * @param  \App\ActivityLog  $activityLog
      * @return \Illuminate\Http\Response
      */
-    public function show(TrainerTraining $trainerTraining)
+    public function show(ActivityLog $activityLog)
     {
         //
     }
@@ -52,10 +52,10 @@ class TrainerTrainingController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\TrainerTraining  $trainerTraining
+     * @param  \App\ActivityLog  $activityLog
      * @return \Illuminate\Http\Response
      */
-    public function edit(TrainerTraining $trainerTraining)
+    public function edit(ActivityLog $activityLog)
     {
         //
     }
@@ -64,10 +64,10 @@ class TrainerTrainingController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\TrainerTraining  $trainerTraining
+     * @param  \App\ActivityLog  $activityLog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TrainerTraining $trainerTraining)
+    public function update(Request $request, ActivityLog $activityLog)
     {
         //
     }
@@ -75,10 +75,10 @@ class TrainerTrainingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\TrainerTraining  $trainerTraining
+     * @param  \App\ActivityLog  $activityLog
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TrainerTraining $trainerTraining)
+    public function destroy(ActivityLog $activityLog)
     {
         //
     }

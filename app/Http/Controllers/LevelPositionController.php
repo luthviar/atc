@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Level_Position;
+use App\LevelPosition;
 use Illuminate\Http\Request;
 
 class LevelPositionController extends Controller
@@ -41,10 +41,10 @@ class LevelPositionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Level_Position  $level_Position
+     * @param  \App\LevelPosition  $levelPosition
      * @return \Illuminate\Http\Response
      */
-    public function show(Level_Position $level_Position)
+    public function show(LevelPosition $levelPosition)
     {
         //
     }
@@ -52,10 +52,10 @@ class LevelPositionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Level_Position  $level_Position
+     * @param  \App\LevelPosition  $levelPosition
      * @return \Illuminate\Http\Response
      */
-    public function edit(Level_Position $level_Position)
+    public function edit(LevelPosition $levelPosition)
     {
         //
     }
@@ -64,10 +64,10 @@ class LevelPositionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Level_Position  $level_Position
+     * @param  \App\LevelPosition  $levelPosition
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Level_Position $level_Position)
+    public function update(Request $request, LevelPosition $levelPosition)
     {
         //
     }
@@ -75,10 +75,10 @@ class LevelPositionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Level_Position  $level_Position
+     * @param  \App\LevelPosition  $levelPosition
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Level_Position $level_Position)
+    public function destroy(LevelPosition $levelPosition)
     {
         //
     }

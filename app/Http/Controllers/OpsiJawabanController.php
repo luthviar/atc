@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Opsi_Jawaban;
+use App\OpsiJawaban;
 use Illuminate\Http\Request;
 
 class OpsiJawabanController extends Controller
@@ -41,10 +41,10 @@ class OpsiJawabanController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Opsi_Jawaban  $opsi_Jawaban
+     * @param  \App\OpsiJawaban  $opsiJawaban
      * @return \Illuminate\Http\Response
      */
-    public function show(Opsi_Jawaban $opsi_Jawaban)
+    public function show(OpsiJawaban $opsiJawaban)
     {
         //
     }
@@ -52,10 +52,10 @@ class OpsiJawabanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Opsi_Jawaban  $opsi_Jawaban
+     * @param  \App\OpsiJawaban  $opsiJawaban
      * @return \Illuminate\Http\Response
      */
-    public function edit(Opsi_Jawaban $opsi_Jawaban)
+    public function edit(OpsiJawaban $opsiJawaban)
     {
         //
     }
@@ -64,10 +64,10 @@ class OpsiJawabanController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Opsi_Jawaban  $opsi_Jawaban
+     * @param  \App\OpsiJawaban  $opsiJawaban
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Opsi_Jawaban $opsi_Jawaban)
+    public function update(Request $request, OpsiJawaban $opsiJawaban)
     {
         //
     }
@@ -75,10 +75,10 @@ class OpsiJawabanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Opsi_Jawaban  $opsi_Jawaban
+     * @param  \App\OpsiJawaban  $opsiJawaban
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Opsi_Jawaban $opsi_Jawaban)
+    public function destroy(OpsiJawaban $opsiJawaban)
     {
         //
     }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Section_Training_Type;
+use App\SectionTrainingType;
 use Illuminate\Http\Request;
 
 class SectionTrainingTypeController extends Controller
@@ -41,10 +41,10 @@ class SectionTrainingTypeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Section_Training_Type  $section_Training_Type
+     * @param  \App\SectionTrainingType  $sectionTrainingType
      * @return \Illuminate\Http\Response
      */
-    public function show(Section_Training_Type $section_Training_Type)
+    public function show(SectionTrainingType $sectionTrainingType)
     {
         //
     }
@@ -52,10 +52,10 @@ class SectionTrainingTypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Section_Training_Type  $section_Training_Type
+     * @param  \App\SectionTrainingType  $sectionTrainingType
      * @return \Illuminate\Http\Response
      */
-    public function edit(Section_Training_Type $section_Training_Type)
+    public function edit(SectionTrainingType $sectionTrainingType)
     {
         //
     }
@@ -64,10 +64,10 @@ class SectionTrainingTypeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Section_Training_Type  $section_Training_Type
+     * @param  \App\SectionTrainingType  $sectionTrainingType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Section_Training_Type $section_Training_Type)
+    public function update(Request $request, SectionTrainingType $sectionTrainingType)
     {
         //
     }
@@ -75,10 +75,10 @@ class SectionTrainingTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Section_Training_Type  $section_Training_Type
+     * @param  \App\SectionTrainingType  $sectionTrainingType
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Section_Training_Type $section_Training_Type)
+    public function destroy(SectionTrainingType $sectionTrainingType)
     {
         //
     }

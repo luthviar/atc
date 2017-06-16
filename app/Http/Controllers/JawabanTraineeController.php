@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Jawaban_Trainee;
+use App\JawabanTrainee;
 use Illuminate\Http\Request;
 
 class JawabanTraineeController extends Controller
@@ -41,10 +41,10 @@ class JawabanTraineeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Jawaban_Trainee  $jawaban_Trainee
+     * @param  \App\JawabanTrainee  $jawabanTrainee
      * @return \Illuminate\Http\Response
      */
-    public function show(Jawaban_Trainee $jawaban_Trainee)
+    public function show(JawabanTrainee $jawabanTrainee)
     {
         //
     }
@@ -52,10 +52,10 @@ class JawabanTraineeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Jawaban_Trainee  $jawaban_Trainee
+     * @param  \App\JawabanTrainee  $jawabanTrainee
      * @return \Illuminate\Http\Response
      */
-    public function edit(Jawaban_Trainee $jawaban_Trainee)
+    public function edit(JawabanTrainee $jawabanTrainee)
     {
         //
     }
@@ -64,10 +64,10 @@ class JawabanTraineeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Jawaban_Trainee  $jawaban_Trainee
+     * @param  \App\JawabanTrainee  $jawabanTrainee
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Jawaban_Trainee $jawaban_Trainee)
+    public function update(Request $request, JawabanTrainee $jawabanTrainee)
     {
         //
     }
@@ -75,10 +75,10 @@ class JawabanTraineeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Jawaban_Trainee  $jawaban_Trainee
+     * @param  \App\JawabanTrainee  $jawabanTrainee
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Jawaban_Trainee $jawaban_Trainee)
+    public function destroy(JawabanTrainee $jawabanTrainee)
     {
         //
     }

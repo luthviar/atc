@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Trainee_Training;
+use App\TraineeTraining;
 use Illuminate\Http\Request;
 
 class TraineeTrainingController extends Controller
@@ -41,10 +41,10 @@ class TraineeTrainingController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Trainee_Training  $trainee_Training
+     * @param  \App\TraineeTraining  $traineeTraining
      * @return \Illuminate\Http\Response
      */
-    public function show(Trainee_Training $trainee_Training)
+    public function show(TraineeTraining $traineeTraining)
     {
         //
     }
@@ -52,10 +52,10 @@ class TraineeTrainingController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Trainee_Training  $trainee_Training
+     * @param  \App\TraineeTraining  $traineeTraining
      * @return \Illuminate\Http\Response
      */
-    public function edit(Trainee_Training $trainee_Training)
+    public function edit(TraineeTraining $traineeTraining)
     {
         //
     }
@@ -64,10 +64,10 @@ class TraineeTrainingController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Trainee_Training  $trainee_Training
+     * @param  \App\TraineeTraining  $traineeTraining
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Trainee_Training $trainee_Training)
+    public function update(Request $request, TraineeTraining $traineeTraining)
     {
         //
     }
@@ -75,10 +75,10 @@ class TraineeTrainingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Trainee_Training  $trainee_Training
+     * @param  \App\TraineeTraining  $traineeTraining
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Trainee_Training $trainee_Training)
+    public function destroy(TraineeTraining $traineeTraining)
     {
         //
     }

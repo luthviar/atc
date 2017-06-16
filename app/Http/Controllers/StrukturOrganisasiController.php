@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Struktur_Organisasi;
+use App\StrukturOrganisasi;
 use Illuminate\Http\Request;
 
 class StrukturOrganisasiController extends Controller
@@ -41,10 +41,10 @@ class StrukturOrganisasiController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Struktur_Organisasi  $struktur_Organisasi
+     * @param  \App\StrukturOrganisasi  $strukturOrganisasi
      * @return \Illuminate\Http\Response
      */
-    public function show(Struktur_Organisasi $struktur_Organisasi)
+    public function show(StrukturOrganisasi $strukturOrganisasi)
     {
         //
     }
@@ -52,10 +52,10 @@ class StrukturOrganisasiController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Struktur_Organisasi  $struktur_Organisasi
+     * @param  \App\StrukturOrganisasi  $strukturOrganisasi
      * @return \Illuminate\Http\Response
      */
-    public function edit(Struktur_Organisasi $struktur_Organisasi)
+    public function edit(StrukturOrganisasi $strukturOrganisasi)
     {
         //
     }
@@ -64,10 +64,10 @@ class StrukturOrganisasiController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Struktur_Organisasi  $struktur_Organisasi
+     * @param  \App\StrukturOrganisasi  $strukturOrganisasi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Struktur_Organisasi $struktur_Organisasi)
+    public function update(Request $request, StrukturOrganisasi $strukturOrganisasi)
     {
         //
     }
@@ -75,10 +75,10 @@ class StrukturOrganisasiController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Struktur_Organisasi  $struktur_Organisasi
+     * @param  \App\StrukturOrganisasi  $strukturOrganisasi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Struktur_Organisasi $struktur_Organisasi)
+    public function destroy(StrukturOrganisasi $strukturOrganisasi)
     {
         //
     }
