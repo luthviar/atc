@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Training;
 use App\SectionTraining;
+use App\SectionTrainingType;
 use Illuminate\Http\Request;
 
 class SectionTrainingController extends Controller
@@ -22,9 +24,11 @@ class SectionTrainingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($idTraining)
     {
-        //
+        $type = SectionTrainingType::all();
+        $training = Training::find($idTraining);
+        return view('test.add-section-training')->with('type', $type)->with('training', $training);
     }
 
     /**
@@ -35,7 +39,13 @@ class SectionTrainingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $sectionTraining = new SectionTraining;
+        $sectionTraining->id_type = $request->type;
+        $sectionTraining->id_training = $request->id_training;
+        $sectionTraining->sequence = $request->sequence;
+        $sectionTraining->save();
+
+    
     }
 
     /**

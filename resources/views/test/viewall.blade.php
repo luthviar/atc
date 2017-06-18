@@ -1,4 +1,8 @@
 <h1>Daftar Modul</h1>
+<a href="/module/create"><button>Create Module</button></a>
+
+<br>
+
 
 <br>
 @foreach ($module as $modul)

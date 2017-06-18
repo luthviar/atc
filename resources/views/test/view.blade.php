@@ -8,3 +8,5 @@
 <hr>
 @endforeach
 
+<a href="/training/create"><button>Create Training</button></a>
+

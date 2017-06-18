@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use DB;
 use App\Test;
+use App\QuestionType;
 use Illuminate\Http\Request;
 
 class TestController extends Controller
@@ -23,9 +24,9 @@ class TestController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id_section)
     {
-        //
+        return view('test.add-test')->with('id_section', $id_section);
     }
 
     /**
@@ -36,7 +37,15 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $test = new Test;
+        $test->id_section_training = $request->id_section;
+        $test->title = $request->title;
+        $test->time = $request->time;
+        $test->jumlah_soal = $request->jml_soal;
+        $test->attemp = $request->attemp;
+        $test->question_per_page = $request->question_per_page;
+        $test->min_score = $request->min_score;
+        $test->save();
     }
 
     /**

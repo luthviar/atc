@@ -21,6 +21,14 @@ Route::resource('training', 'TrainingController');
 
 Route::resource('test', 'TestController');
 
+Route::get('/test/create/{idSection}', 'TestController@create');
+
+Route::post('/test/create', 'TestController@store');
+
+Route::get('/section/create/{id}', 'SectionTrainingController@create');
+
+Route::post('/section/create', 'SectionTrainingController@store');
+
 Route::post('/answer/{id}', 'JawabanTraineeController@store');
 
 

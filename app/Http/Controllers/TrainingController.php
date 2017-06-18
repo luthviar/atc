@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use DB;
+use App\Module;
+use App\Personnel; 
 use App\Training;
 use App\SectionTraining;
+use App\TrainerTraining;
 use Illuminate\Http\Request;
 
 class TrainingController extends Controller
@@ -26,7 +29,9 @@ class TrainingController extends Controller
      */
     public function create()
     {
-        //
+        $module = Module::all();
+        $Personnel = Personnel::all();
+        return view('test.create-training')->with('module',$module)->with('personnel',$Personnel);
     }
 
     /**
@@ -37,7 +42,34 @@ class TrainingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this -> validate($request, [
+            'module' => 'required',
+            'title' => 'required',
+            'trainer' => 'required',
+        ]);
+
+        // $training = new Training;
+        // $training->id_module = $request->module;
+        // $training->title = $request->title;
+        // $training->description = $request->desc;
+        // $training->enroll_key = $request->enroll_key;
+        // $training->save();
+
+        $id = DB::table('trainings')-> insertGetId(array(
+            'id_module' => $request->module,
+            'title' => $request->title,
+            'description' => $request->desc,
+            'enroll_key' => $request->enroll_key,
+        ));
+
+        $trainer = new TrainerTraining;
+        $trainer->id_user = $request->trainer;
+        $trainer->id_training = $id;
+        $trainer->save();
+
+        
+
+
     }
 
     /**
