@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\Training;
 use App\SectionTraining;
 use Illuminate\Http\Request;
@@ -47,13 +48,33 @@ class TrainingController extends Controller
      */
     public function show($training)
     {
-        $training = Training::find($training);
-        $section = SectionTraining::where('id_training',$training->id)->get();
+        $train = Training::find($training);
+        //$section = SectionTraining::where('id_training',$training->id)->get();
+        $section = DB::table('section_trainings')
+            ->join('section_training_types', function($join) {
+                $join->on('section_training_types.id','=','section_trainings.id_type');
+            })->select('section_trainings.*', 'section_training_types.nama')
+            ->where('section_trainings.id_training','=',$training)
+            ->get();
+        $array = array();
+        foreach ($section as $value) {
+            $content = DB::table('section_trainings')
+            ->join('tests', function($join) {
+                $join->on('tests.id_section_training','=','section_trainings.id');
+            })->select('section_trainings.*', 'tests.*')
+            ->where('tests.id_section_training','=',$value->id)
+            ->get();
+
+            $array = array_add($array,$value->id,$content);
+        }
         return view('test.training-show', [
-            'training' => $training,
-            'section' => $section
+            'training' => $train,
+            'section' => $section,
+            'content' => $array
             ]);
     }
+
+    
 
     /**
      * Show the form for editing the specified resource.

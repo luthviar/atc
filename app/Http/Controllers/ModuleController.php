@@ -25,7 +25,8 @@ class ModuleController extends Controller
      */
     public function create()
     {
-        //
+        $parent = Module::all();
+        return view('test.create-module')->with('parent',$parent);
     }
 
     /**
@@ -36,7 +37,22 @@ class ModuleController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $this -> validate($request, [
+            'short_name' => 'required',
+            'nama' => 'required',
+            'desc' => 'required',
+        ]);
+
+        $module = new Module;
+        $module->short_name = $request->short_name;
+        $module->nama = $request->nama;
+        $module->description = $request->desc;
+        if($request->parent != null){
+            $module->parent = $request->parent;    
+        }
+        $module->save();
+
+        return redirect('module');
     }
 
     /**

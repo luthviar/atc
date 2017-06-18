@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\Test;
 use Illuminate\Http\Request;
 
@@ -44,9 +45,24 @@ class TestController extends Controller
      * @param  \App\Test  $test
      * @return \Illuminate\Http\Response
      */
-    public function show(Test $test)
+    public function show($test)
     {
-        //
+        $test = Test::find($test);
+        $question = DB::table('questions')
+            ->join('question_types', function($join) {
+                $join->on('question_types.id','=','questions.id_type');
+            })->select('questions.*', 'question_types.name')
+            ->where('questions.id_test','=',$test->id)
+            ->get();
+        foreach ($question as  $ques) {
+            if($ques->id_type == 1){
+                $ques->opsi = DB::table('opsi_jawabans')
+                    ->select('opsi_jawabans.*')
+                    ->where('id_question','=',$ques->id)
+                    ->get();
+            }
+        }
+        return view('test.test-view')->with('test',$test)->with('question',$question);
     }
 
     /**

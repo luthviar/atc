@@ -19,4 +19,8 @@ Route::resource('module', 'ModuleController');
 
 Route::resource('training', 'TrainingController');
 
+Route::resource('test', 'TestController');
+
+Route::post('/answer/{id}', 'JawabanTraineeController@store');
+
 

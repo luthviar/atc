@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\JawabanTrainee;
+use App\Test;
 use Illuminate\Http\Request;
 
 class JawabanTraineeController extends Controller
@@ -33,9 +35,24 @@ class JawabanTraineeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $question = DB::table('questions')
+            ->join('question_types', function($join) {
+                $join->on('question_types.id','=','questions.id_type');
+            })->select('questions.*', 'question_types.name')
+            ->where('questions.id_test','=',$id)
+            ->get();
+        
+        foreach ($question as $ques) {
+            $jawaban = new JawabanTrainee;
+            $id = $ques->id;
+            $jawaban->id_question = $ques->id;
+            $jawaban->isi_jawaban = $request->$id;    
+            $jawaban->save();
+        }
+        
+        
     }
 
     /**

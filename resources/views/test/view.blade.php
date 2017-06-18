@@ -4,7 +4,7 @@
 </section>
 <br>
 @foreach ($modul['training'] as $training)
-  <h3>{{$training->title}}</h3>
+  <a href="/training/{{$training->id}}"><h3>{{$training->title}}</h3></a>
 <hr>
 @endforeach
 
