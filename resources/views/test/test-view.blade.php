@@ -6,12 +6,17 @@
 <h3>Jumlah soal : {{$test->jumlah_soal}}</h3>
 <h3>Attemp allowed : {{$test->attemp}} kali</h3>
 <h3>Batas lulus nilai : {{$test->min_score}}</h3>
-	  		
+
+<a href="/question/create/{{$test->id}}">Add Question</a>
+
+@if($question)
+
 <form action="/answer/{{$test->id}}" method="post">
 
 @foreach ($question as $ques)
   <h3>{{$ques->no_soal}}. {{$ques->pertanyaan}}</h3>
   	@if($ques->id_type == 1)
+  		<a href="/opsi/create/{{$ques->id}}">add opsi jawaban</a>
 	  	@foreach ($ques->opsi as $opsi)
 	  		 <input type="radio" name="{{ $ques->id }}" value="{{ $opsi->pilihan }}">{{$opsi->pilihan}}. {{$opsi->isi_opsi}}</input></br>
 		@endforeach
@@ -34,3 +39,5 @@
 <input type="submit" name="name" value="post">
 
 </form>
+
+@endif

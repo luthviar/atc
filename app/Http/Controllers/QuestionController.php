@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Question;
+use App\Test;
+use App\QuestionType;
 use Illuminate\Http\Request;
 
 class QuestionController extends Controller
@@ -22,9 +24,11 @@ class QuestionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($idTest)
     {
-        //
+        $test = Test::find($idTest);
+        $type = QuestionType::all();
+        return view('test.add-question')->with('type',$type)->with('idTest',$idTest);
     }
 
     /**
@@ -35,7 +39,16 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $question = new Question;
+        $question->id_test = $request->id_test;
+        $question->id_type = $request->type;
+        $question->no_soal = $request->no_soal;
+        $question->pertanyaan = $request->pertanyaan;
+        $question->true_answer = $request->true_answer;
+        $question->skor_maks = $request->skor_maks;
+        $question->save();
+
+        
     }
 
     /**

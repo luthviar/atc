@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\OpsiJawaban;
+use App\Question;
 use Illuminate\Http\Request;
 
 class OpsiJawabanController extends Controller
@@ -22,9 +23,9 @@ class OpsiJawabanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id_question)
     {
-        //
+        return view('test.add-opsi')->with('id_question',$id_question);
     }
 
     /**
@@ -35,7 +36,11 @@ class OpsiJawabanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $opsi = new OpsiJawaban;
+        $opsi->id_question = $request->id_question;
+        $opsi->isi_opsi = $request->isi_opsi;
+        $opsi->pilihan = $request->pilihan;
+        $opsi->save();
     }
 
     /**
