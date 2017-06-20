@@ -44,3 +44,7 @@ Route::post('/answer/{id}', 'JawabanTraineeController@store');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/starter', function () {
+    return view('starter');
+});
